@@ -1,12 +1,3 @@
-/* 
-
-JavaScript Document
-
-TemplateMo 611 Maison Doree
-
-https://templatemo.com/tm-611-maison-doree
-
-*/
 
 // Header scroll effect
 const header = document.getElementById('header');
@@ -124,4 +115,18 @@ document.querySelectorAll('section:not(.hero)').forEach(section => {
    section.style.transform = 'translateY(30px)';
    section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
    observer.observe(section);
+   
+   
+   
+   const slides = document.querySelectorAll('.hero-slide');
+   let currentSlide = 0;
+   
+   function nextSlide() {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.add('active');
+   }
+   
+   // Change slide every 5 seconds
+   setInterval(nextSlide, 5000);
 });
