@@ -652,7 +652,7 @@ a {
 
 .story-images {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 2fr;
     gap: var(--space-md);
     position: relative;
 }
